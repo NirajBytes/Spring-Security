@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
-public class WelcomeController {
+public class BalanceController {
 
-@GetMapping("/welcome")
-public String getMethodName() {
-    return "welcome to application with Security";
+@GetMapping("/myBalance")
+public String getBalanceDetails() {
+    return "Here are the balance details from the database";
 }
 
 }
