@@ -22,7 +22,7 @@ public class ProjectSecurityConfig {
 		http.formLogin(Customizer.withDefaults());
 		http.httpBasic(Customizer.withDefaults());
 		 http.csrf(AbstractHttpConfigurer::disable);
-//		http.formLogin(login -> login.disable()); // Disables form login
+//		http.formLogin(login -> login.disable()); // Disables
 //		http.httpBasic(basic -> basic.disable()); // Disables basic authentication
 		return http.build();
 	}
