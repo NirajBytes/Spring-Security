@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,13 +15,11 @@ public class ProjectSecurityConfig {
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 //		http.authorizeHttpRequests((requests) -> requests.anyRequest().denyAll());
 //		http.authorizeHttpRequests((requests) -> requests.anyRequest().permitAll());
-		http.authorizeHttpRequests((requests) -> requests
-				.requestMatchers("/myAccount","/myBalance","/myLoans","/myCards").authenticated()
-				.requestMatchers("/notices","/contact").permitAll());
-		
-		http.formLogin(Customizer.withDefaults());
-		http.httpBasic(Customizer.withDefaults());
-		 http.csrf(AbstractHttpConfigurer::disable);
+		http.authorizeHttpRequests(
+				(requests) -> requests.requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards")
+						.authenticated().requestMatchers("/notices", "/contact").permitAll());
+		http.formLogin(withDefaults());
+		http.httpBasic(withDefaults());
 //		http.formLogin(login -> login.disable()); // Disables
 //		http.httpBasic(basic -> basic.disable()); // Disables basic authentication
 		return http.build();
