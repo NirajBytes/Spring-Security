@@ -9,6 +9,7 @@ This project demonstrates Spring Security integration with Spring Boot, showcasi
 ✅ Token-based authentication (JWT in future updates)
 
 🔧 Project Structure
+
 spring-security/
 
 │── src/main/java/com/example/
@@ -39,7 +40,9 @@ spring-security/
 
 📜 Future Enhancements
 🚀 Implement JWT-based authentication
+
 🚀 Role-based access control (RBAC)
+
 🚀 OAuth2 / Social Login Integration
 
 📩 Author: Niraj Balpande
