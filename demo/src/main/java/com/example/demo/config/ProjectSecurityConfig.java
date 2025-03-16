@@ -17,7 +17,7 @@ public class ProjectSecurityConfig {
 				(requests) -> requests.requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards")
 						.authenticated().requestMatchers("/notices", "/contact","/error").permitAll());
 		http.formLogin(Customizer.withDefaults()); //Enable
-//		http.formLogin(flc -> flc.disable()); // Disables 
+//		http.formLogin(flc -> flc.disable()); // Disables formlogin
 		http.httpBasic(Customizer.withDefaults());
 //		http.httpBasic(hbc -> hbc.disable()); // Disables basic authentication
 		 
