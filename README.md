@@ -39,6 +39,7 @@ spring-security/
 │── README.md                    # Project Documentation
 
 📜 Future Enhancements
+
 🚀 Implement JWT-based authentication
 
 🚀 Role-based access control (RBAC)
