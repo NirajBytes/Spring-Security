@@ -28,7 +28,7 @@ public class ProjectSecurityConfig {
 		return http.build();
 	}
 
-	//inMemory User
+	// inMemory User
 	@Bean
 	public UserDetailsService userDetailsService() {
 		UserDetails user = User.withUsername("user").password("{noop}12345").roles("USER").build();
@@ -36,6 +36,5 @@ public class ProjectSecurityConfig {
 		UserDetails admin = User.withUsername("admin").password("{noop}54321").roles("ADMIN").build();
 		return new InMemoryUserDetailsManager(user, admin);
 	}
-	
-	
+
 }
